@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
 import {
   Switch,
   Route,
@@ -103,4 +104,5 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+const connectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
+export default process.env.NODE_ENV === "development" ? hot(connectedApp) : connectedApp
