@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './Dashboard.css';
+import "./Dashboard.css";
 
 function Dashboard(props) {
-    return (
-        <div>Dashboard</div>
-    );
+  return <div>Dashboard</div>;
 }
 
 export default Dashboard;

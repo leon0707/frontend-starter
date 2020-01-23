@@ -1,4 +1,4 @@
-import { SUCCESS, ERROR, CLEAR } from './actionTypes';
+import { SUCCESS, ERROR, CLEAR } from "./actionTypes";
 
 const initialState = {
   type: null,
@@ -10,12 +10,12 @@ const alertReducer = (state = initialState, action) => {
     case SUCCESS:
       return {
         ...state,
-        type: 'success',
+        type: "success",
         message: action.payload
       };
     case ERROR:
       return {
-        type: 'danger',
+        type: "danger",
         message: action.payload
       };
     case CLEAR:
@@ -25,8 +25,8 @@ const alertReducer = (state = initialState, action) => {
         message: null
       };
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default alertReducer;
