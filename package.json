@@ -1,5 +1,5 @@
 {
-  "name": "csr-frontend",
+  "name": "frontend-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,7 +39,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "prettier": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "prettier": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "eslint": "npx eslint . --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
