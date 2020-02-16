@@ -8,7 +8,7 @@ import SignIn from "../SignIn";
 
 import "./LandingPage.css";
 
-function LandingPage(props) {
+function LandingPage() {
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/dashboard" } };
 

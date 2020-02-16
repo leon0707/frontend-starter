@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Dashboard.css";
 
-function Dashboard(props) {
+function Dashboard() {
   return <div>Dashboard</div>;
 }
 
