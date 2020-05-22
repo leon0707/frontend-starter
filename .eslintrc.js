@@ -42,6 +42,9 @@ module.exports = {
         ]
     },
     "settings": {
-        "version": "detect"
+        "react": {
+            "pragma": "React",
+            "version": "16.12"
+        } 
     }
 };

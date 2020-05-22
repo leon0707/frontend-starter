@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { hot } from "react-hot-loader/root";
 import { Switch, Route, Redirect, Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -73,6 +74,14 @@ function App(props) {
   );
 }
 
+App.propTypes = {
+  auth_token: PropTypes.string,
+  signOut: PropTypes.func,
+  type: PropTypes.string,
+  message: PropTypes.string,
+  onCloseAlert: PropTypes.func
+};
+
 function ProtectedRoute(props) {
   const { component, is_auth, ...rest } = props;
   const Component = component;
@@ -94,6 +103,11 @@ function ProtectedRoute(props) {
     />
   );
 }
+
+ProtectedRoute.propTypes = {
+  component: PropTypes.component,
+  is_auth: PropTypes.bool
+};
 
 const mapStateToProps = state => {
   return {

@@ -31,7 +31,7 @@ export const signIn = (username, password, from) => {
   function failure(error) {
     return {
       type: SIGNIN_FAILURE,
-      payload: null
+      payload: error
     };
   }
 };

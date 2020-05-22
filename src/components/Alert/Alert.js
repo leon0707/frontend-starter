@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import BootstrapAlert from "react-bootstrap/Alert";
 
 import "./Alert.css";
@@ -21,5 +22,10 @@ function Alert(props) {
     </>
   );
 }
+Alert.propTypes = {
+  type: PropTypes.string,
+  message: PropTypes.string,
+  onClose: PropTypes.func
+};
 
 export default Alert;

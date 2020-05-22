@@ -7,25 +7,25 @@ const initialState = {
 
 const alertReducer = (state = initialState, action) => {
   switch (action.type) {
-  case SUCCESS:
-    return {
-      ...state,
-      type: "success",
-      message: action.payload
-    };
-  case ERROR:
-    return {
-      type: "danger",
-      message: action.payload
-    };
-  case CLEAR:
-    return {
-      ...state,
-      type: null,
-      message: null
-    };
-  default:
-    return state;
+    case SUCCESS:
+      return {
+        ...state,
+        type: "success",
+        message: action.payload
+      };
+    case ERROR:
+      return {
+        type: "danger",
+        message: action.payload
+      };
+    case CLEAR:
+      return {
+        ...state,
+        type: null,
+        message: null
+      };
+    default:
+      return state;
   }
 };
 

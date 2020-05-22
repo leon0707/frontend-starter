@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -65,6 +66,11 @@ class SignIn extends React.Component {
     );
   }
 }
+
+SignIn.propTypes = {
+  from: PropTypes.string,
+  signIn: PropTypes.func
+};
 
 const actions = {
   signIn: signIn

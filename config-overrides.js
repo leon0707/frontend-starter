@@ -12,7 +12,8 @@ module.exports = function override(config, env) {
   config["resolve"] = {
     "alias": {
       "react": path.resolve("./node_modules/react"),
-      "react-dom": "@hot-loader/react-dom"
+      "react-dom": "@hot-loader/react-dom",
+      "proptypes": "proptypes/disabled",
     }
   };
 
