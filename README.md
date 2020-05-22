@@ -30,4 +30,11 @@ npm install eslint --save-dev
 npx eslint --init
 ```
 
+install prettier <https://prettier.io/docs/en/integrating-with-linters.html#eslint>
+
+
 ## Testing
+
+```shell
+
+```

@@ -6,7 +6,12 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "prettier/flowtype",
+        "prettier/react",
+        "prettier/standard",
+        "prettier"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -21,13 +26,14 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
+        // "indent": [
+        //     "error",
+        //     2
+        // ],
         "linebreak-style": [
             "error",
             "unix"
@@ -39,7 +45,8 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "prettier/prettier": "error"
     },
     "settings": {
         "react": {
