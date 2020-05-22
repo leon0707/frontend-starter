@@ -1,7 +1,7 @@
-import { resolve } from "path";
-import rewireReactHotLoader from "react-app-rewire-hot-loader";
+const path = require("path");
+const rewireReactHotLoader = require("react-app-rewire-hot-loader");
 
-export default function override(config, env) {
+module.exports = function override(config, env) {
   //do stuff with the webpack config...
   config["externals"] = {
     "config": JSON.stringify({
@@ -11,11 +11,11 @@ export default function override(config, env) {
 
   config["resolve"] = {
     "alias": {
-      "react": resolve("./node_modules/react"),
+      "react": path.resolve("./node_modules/react"),
       "react-dom": "@hot-loader/react-dom"
     }
   };
 
   config = rewireReactHotLoader(config, env);
   return config;
-}
+};

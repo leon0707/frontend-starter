@@ -44,6 +44,11 @@
     "eslint": "npx eslint . --fix",
     "snyk": "./node_modules/.bin/snyk test"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run-script snyk && npm test && npm run-script build"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
