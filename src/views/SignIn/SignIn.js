@@ -68,7 +68,7 @@ class SignIn extends React.Component {
 }
 
 SignIn.propTypes = {
-  from: PropTypes.string,
+  from: PropTypes.object,
   signIn: PropTypes.func
 };
 

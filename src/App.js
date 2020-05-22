@@ -105,7 +105,7 @@ function ProtectedRoute(props) {
 }
 
 ProtectedRoute.propTypes = {
-  component: PropTypes.component,
+  component: PropTypes.func,
   is_auth: PropTypes.bool
 };
 
